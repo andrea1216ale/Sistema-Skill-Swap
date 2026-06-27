@@ -1,0 +1,43 @@
+<div class="register-background">
+  <a routerLink="/" class="back-button">← Inicio</a>
+  <div class="register-card">
+    <h1>Skill Swap</h1>
+    <h2>Crear tu perfil</h2>
+    <p>Completa tus datos para empezar a intercambiar habilidades.</p>
+
+    <form (ngSubmit)="submit()">
+      <div class="row">
+        <input [(ngModel)]="nombre" name="nombre" type="text" placeholder="Nombre completo">
+        <input [(ngModel)]="correo" name="correo" type="email" placeholder="Correo electrónico">
+      </div>
+      <div class="row">
+        <input [(ngModel)]="password" name="password" type="password" placeholder="Contraseña">
+        <input [(ngModel)]="edad" name="edad" type="number" placeholder="Edad">
+      </div>
+
+      <h3>Idiomas que conoces</h3>
+      <div class="options">
+        <label><input type="checkbox"> Español</label>
+        <label><input type="checkbox"> Inglés</label>
+        <label><input type="checkbox"> Francés</label>
+      </div>
+
+      <h3>Habilidades que tienes</h3>
+      <div class="options">
+        <label><input type="checkbox"> Programación</label>
+        <label><input type="checkbox"> Diseño gráfico</label>
+        <label><input type="checkbox"> Marketing digital</label>
+      </div>
+
+      <h3>Nivel principal</h3>
+      <select [(ngModel)]="nivel" name="nivel">
+        <option>Selecciona nivel</option>
+        <option>Principiante</option>
+        <option>Intermedio</option>
+        <option>Avanzado</option>
+      </select>
+
+      <button type="submit">Crear cuenta</button>
+    </form>
+  </div>
+</div>
