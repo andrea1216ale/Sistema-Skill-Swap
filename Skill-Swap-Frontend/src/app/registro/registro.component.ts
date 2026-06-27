@@ -3,6 +3,7 @@ import { BackendService } from '../services/backend.service';
 
 @Component({
   selector: 'app-registro',
+  standalone: false,
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
