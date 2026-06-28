@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackendService } from '../services/backend.service';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,13 @@ export class LoginComponent {
   email = '';
   password = '';
 
+  constructor(private backend: BackendService) {}
+
   login() {
-    // Implement login call to backend if needed
-    alert('Login intent: ' + this.email);
+    const payload = { correo: this.email, password: this.password };
+    this.backend.login(payload).subscribe({
+      next: (res: any) => alert(res.mensaje || 'Inicio de sesión correcto'),
+      error: () => alert('No se pudo conectar con el backend')
+    });
   }
 }

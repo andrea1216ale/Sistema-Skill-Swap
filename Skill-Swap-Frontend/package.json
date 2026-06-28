@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --host 127.0.0.1 --port 4200 --proxy-config proxy.conf.json",
     "build": "ng build"
   },
   "dependencies": {
-    "@angular/animations": "^21.2.0",
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
     "@angular/core": "^21.2.0",
